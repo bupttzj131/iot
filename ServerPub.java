@@ -11,17 +11,17 @@ public class ServerPub {
 	public static void main(String[] args) {
 		try 
 		{ 
-			String accessKey = "LTAI4GE1dZD5nCVrofFD7wZG";
-			String accessSecret = "oyEGMLE82T6KPIlVUNCXNNkbvhAQfF";
+			String accessKey = "xxxx";
+			String accessSecret = "xxxx";
 			DefaultProfile.addEndpoint("cn-shanghai", "cn-shanghai", "Iot", "iot.cn-shanghai.aliyuncs.com");
 			IClientProfile profile = DefaultProfile.getProfile("cn-shanghai", accessKey, accessSecret);
-			DefaultAcsClient client = new DefaultAcsClient(profile); //³õÊ¼»¯SDK¿Í»§¶Ë
+			DefaultAcsClient client = new DefaultAcsClient(profile); //åˆå§‹åŒ–SDKå®¢æˆ·ç«¯
 			
 			PubRequest request = new PubRequest(); 
-			request.setProductKey("a1BzNZfN2TX"); 
+			request.setProductKey("xxxx"); 
 			request.setMessageContent(Base64.encode("hello world".getBytes())); 
 			request.setTopicFullName("/a1BzNZfN2TX/i950Demo/user/get"); 
-			request.setQos(0); //Ä¿Ç°Ö§³ÖQoS0ºÍQoS1 
+			request.setQos(0); //ç›®å‰æ”¯æŒQoS0å’ŒQoS1 
 		
 		   PubResponse response = client.getAcsResponse(request); 
 		   System.out.println(response.getSuccess()); 
